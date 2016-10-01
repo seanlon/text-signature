@@ -6,6 +6,10 @@
   "scripts": {
     "prod": " browserify index.js > bundle.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seanlon/text-signature"
+  },
   "author": "seanlon <lseanlon@gmail.com>",
   "license": "ISC",
   "devDependencies": {
