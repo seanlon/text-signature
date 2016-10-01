@@ -15,6 +15,8 @@ This image signature can be in any style depending on the font you used like cur
 *  You may automatically generate image signature for email purpose or sign-off letter notes.
 * You can save time to re-write the generation scripts by directly using this.
 
+###   Where can I find working examples or DEMO?
+https://seanlon.github.io/text-signature/
 
 ###   Where can I donate or contact owner?
 
@@ -32,9 +34,7 @@ How to use it?
      ``` 
 
 2) Instantiate it. Check the example parameter below..
-     ```sh
-     
-     
+	```sh  
     //#custom fonts to load 
     var optionsParameter = {
             width: 300,
@@ -52,7 +52,7 @@ How to use it?
     };
     
     textSignature = TextSignature(optionsParameter);
-      ``` 
+	``` 
 
 3) Re-use it.
      ```sh
@@ -89,6 +89,6 @@ customFont: {
 }
 ```  
 
-###   REport a bug, brah?
+###   Report a bug  ?
 Send it to LSeanLon@gmail.com
  

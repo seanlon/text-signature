@@ -1,6 +1,6 @@
 {
   "name": "text-signature",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A generator for converting your text into a signature image  depending on your font style",
   "main": "bundle.js",
   "scripts": {
@@ -10,6 +10,20 @@
     "type": "git",
     "url": "https://github.com/seanlon/text-signature"
   },
+
+  "homepage": "https://github.com/seanlon/text-signature",
+  "keywords": [
+    "text",
+    "signature",
+    "image",
+    "custom",
+    "fonts",
+    "generate",
+    "automatically",
+    "html5",
+    "css3",
+    "css"
+  ],
   "author": "seanlon <lseanlon@gmail.com>",
   "license": "ISC",
   "devDependencies": {
