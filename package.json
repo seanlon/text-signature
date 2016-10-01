@@ -1,10 +1,10 @@
 {
-  "name": "text-signature",
-  "version": "1.0.6",
-  "description": "A generator for converting your text into a signature image  depending on your font style",
+  "name": "Demonstration-text-signature",
+  "version": "1.0.0",
+  "description": "Test text-signature plugins",
   "main": "bundle.js",
   "scripts": {
-    "prod": " browserify index.js > bundle.js"
+    "prod": " browserify index.js > main.js"
   },
   "repository": {
     "type": "git",
@@ -14,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "browserify": "^13.1.0",
+    "text-signature": "^1.0.6",
     "jquery": "^2.1.0"
   }
 }
