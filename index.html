@@ -1,19 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head> 
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
 </head>
 
 <body>
-    <form id="nameForm">
-        <input name="fname" placeholder="First Name" />
-        <input name="lname" placeholder="Last Name" />
-        <button type=submit>Submit</button>
-    </form> 
-    <p></p>
-    <p></p>
-    <p>
+    <div class="col-md-1"> </div>
+    <div class="col-md-10">
+        <form id="nameForm" action="#" class="form-horizontal ws-validate">
+            <div class="form-group">
+                <label for="name" class="control-label">  Name*</label>
+                <input type="text" class="form-control" name="name" value="John Cena" placeholder="First Name" required />
+            </div> 
+            <hr/>
+            <div class="form-group">
+                <h3>Font Settings</h3>
+            </div>
+            <div class="form-group">
+                <label for="fontsize" class="control-label">Font Size</label>
+                <input type="text" class="form-control" name="fontsize" value="50px" />
+            </div>
+            <div class="form-group">
+                <label for="fontfamily" class="control-label">Font Family</label>
+                <input type="text" class="form-control" name="fontfamily" value="'Homemade Apple'" />
+            </div>
+            <div class="form-group">
+                <label for="fonturl" class="control-label">Font Url</label>
+                <input type="text" class="form-control" name="fonturl" value="http://fonts.googleapis.com/css?family=Homemade+Apple" />
+            </div>
+            <div class="form-group">
+                <label for="fontcolor" class="control-label">Font Color</label>
+                <input type="text" class="form-control" name="fontcolor" value="blue" />
+            </div>
+
+               <div class="form-group">
+                <h3>Image Settings</h3>
+            </div>
+            <div class="form-group">
+                <label for="imageheight" class="control-label">Image Height[px]</label>
+                <input type="text" class="form-control" name="imageheight" value="300" />
+            </div>
+            <div class="form-group">
+                <label for="imagewidth" class="control-label">Image Width[px]</label>
+                <input type="text" class="form-control" name="imagewidth" value="300" />
+            </div>
+
+            <div class="form-group">
+                <label for="imagepadx" class="control-label">Image Padding X </label>
+                <input type="text" class="form-control" name="imagepadx" value="100" />
+            </div>
+
+            <div class="form-group">
+                <label for="imagepady" class="control-label">Image Padding Y </label>
+                <input type="text" class="form-control" name="imagepady" value="100" />
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-block btn-danger">Generate via Text-Signature</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-1"> </div>
+    <div class="col-md-1"> </div>
+    <div class="col-md-10">
         <div class="js-canvasTargetDom" width="500" height="500"></div>
-    </p>
+    </div>
+    <div class="col-md-1"> </div>
     <script src="main.js">
     </script>
 </body>

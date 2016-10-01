@@ -3,28 +3,34 @@ $ = require("jquery");
 TextSignature= require("text-signature");
  
 $('#nameForm').on('submit', function(e) {
-    var fName = $('[name="fname"] ').val();
-    var lName = $('[name="lname"] ').val();
+    var textString = $('[name="name"] ').val();  
+    var fontsize = $('[name="fontsize"] ').val();  
+    var fontfamily = $('[name="fontfamily"] ').val();  
+    var fonturl = $('[name="fonturl"] ').val();  
+    var fontcolor = $('[name="fontcolor"] ').val();  
+    var imageheight = $('[name="imageheight"] ').val();  
+    var imagewidth = $('[name="imagewidth"] ').val();  
+    var imagepadx = $('[name="imagepadx"] ').val();  
+    var imagepady = $('[name="imagepady"] ').val();  
 
-    var textString = fName + " " + lName;
-
-    var fontStyleList = ["50px", "'Homemade Apple'"];
+    var fontStyleList = [ fontsize ,  fontfamily];
     var customFont = {
-        name: "'Homemade Apple'",
-        "url": "http://fonts.googleapis.com/css?family=Homemade+Apple"
+        name: fontfamily,
+        "url": fonturl 
+    };
 
-    }
     var paramSignatureText = {
-        width: 300,
-        height: 300,
-        paddingX: 100,
-        paddingY: 100,
+        width: imagewidth,
+        height: imageheight,
+        paddingX: imagepadx,
+        paddingY: imagepady,
         canvasTargetDom: ".js-canvasTargetDom",
         font: fontStyleList,
-        color: "blue",
+        color:  fontcolor,
         textString: textString,
         customFont: customFont
     };
+    console.log(paramSignatureText);
     ts = TextSignature(paramSignatureText);
     e.preventDefault();
     return false;
