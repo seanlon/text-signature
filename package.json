@@ -13,8 +13,9 @@
   "author": "seanlon <lseanlon@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "bootstrap": "^3.3.7",
     "browserify": "^13.1.0",
-    "text-signature": "^1.0.6",
-    "jquery": "^2.1.0"
+    "jquery": "^2.1.0",
+    "text-signature": "^1.0.6"
   }
 }
