@@ -1,10 +1,10 @@
 {
   "name": "text-signature",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A generator for converting your text into a signature",
-  "main": "index.js",
+  "main": "bundle.js",
   "scripts": {
-    "test": "browserify signatureGenerator.js > signatureGeneratorTest.js"
+    "prod": " browserify index.js | uglifyjs > bundle.js"
   },
   "author": "seanlon <lseanlon@gmail.com>",
   "license": "ISC",
