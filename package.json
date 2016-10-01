@@ -1,0 +1,15 @@
+{
+  "name": "text-signature",
+  "version": "1.0.0",
+  "description": "A generator for converting your text into a signature",
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify signatureGenerator.js > signatureGeneratorTest.js"
+  },
+  "author": "seanlon <lseanlon@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "jquery": "^2.1.0"
+  }
+}
