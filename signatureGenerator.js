@@ -42,19 +42,26 @@ function singatureText(options) {
     options.textString = options.textString || "Text-Signature !";
     options.paddingX = options.paddingX || 0;
     options.paddingY = options.paddingY || 0;
-
-    console.log(options);
+ 
     //inject custom font face from external url   
     $('head').find("#text-signature").remove();
     var linkElem = $('<link rel="stylesheet">');
     linkElem.attr('id', "text-signature");
-    linkElem.attr('href', options.customFont.url);
-
-    $('head').append(linkElem);
+    linkElem.attr('href', options.customFont.url);  
 
 
- setTimeout(function(){ 
 
+  
+    $('head').append(linkElem);     
+    if (linkElem[0].addEventListener) {
+        linkElem[0].addEventListener('load', function() { 
+            generateImage();
+        }, false);
+      }
+
+ 
+
+var generateImage = function(){  
 
     var uniquetime = new Date().getUTCMilliseconds();
 
@@ -63,7 +70,7 @@ function singatureText(options) {
     canvasSelectorDom.attr('width', options.width);
     canvasSelectorDom.attr('height', options.height);  
     canvasSelectorDom.attr('id', "text-signature-" + uniquetime);
-    console.log(canvasSelectorDom )
+
     // $('body').append( canvasSelectorDom);
     // $('#' + "text-signature-" + uniquetime).remove();
 
@@ -91,9 +98,7 @@ function singatureText(options) {
     } else {
         window.open(dataUrl, "text-signature image", "width=600, height=200");
     }
-
- // linkElem.load(function() { });
  
-
-  }, 3000);
+ 
+ }
 }
