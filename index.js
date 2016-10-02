@@ -26,6 +26,7 @@ textSignature = function(options) {
                 // wait abit longer and call again -  if first time
                 self.generateImage(options);
                 if (!self.isInitiated) {
+                    $(options.canvasTargetDom).html();
                     setTimeout(function() {
                         self.generateImage(options);
                     }, 2800);
@@ -86,7 +87,7 @@ textSignature = function(options) {
 
         var dataUrl = canvasSelectorDom[0].toDataURL();
         self.imageData = dataUrl;
-        
+
         var img = $('<img>'); //Equivalent: $(document.createElement('img'))
         img.attr('src', dataUrl);
         img.attr('text-signature-timestamp', uniquetime);
