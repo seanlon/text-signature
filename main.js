@@ -9151,10 +9151,14 @@ return jQuery;
 }));
 
 },{}],3:[function(require,module,exports){
+jquery = require("jquery")
 var textSignature = {};
+
 textSignature = function(options) {
     var self = this;
     self.isInitiated = false;
+    self.imageData = null;
+
     this.init = function() {
         //inject custom font face from external url   
         $('head').find("#text-signature").remove();
@@ -9164,27 +9168,38 @@ textSignature = function(options) {
 
         linkElem.attr('href', options.customFont.url);
         if (linkElem[0].addEventListener) {
-            linkElem[0].addEventListener('load', function() { 
+            linkElem[0].addEventListener('load', function() {
 
-                // wait abit longer and call again -  if first time
+                // wait abit slonger and call again -  if first time
+
                 self.generateImage(options);
-                if (!self.isInitiated) { 
-                    setTimeout(function() {   
+                if (!self.isInitiated) {
+                    setTimeout(function() {
+                        $(options.canvasTargetDom).html(" ");
                         self.generateImage(options);
-                    }, 3000);
-                } 
-                
+                    }, 2800);
+                }
+
                 self.isInitiated = true;
             }, false);
         }
 
     }
     this.formatInput = function(options) {
-
-        if (typeof options.font === 'string') {
-            // already formatted
+        //handle errror 
+        if (!options || options == undefined) {
+            throw "text-singature: parameter cannot be null or empty";
+        }
+        if (!options.font) {
+            throw "text-singature: parameter font cannot be empty";
+        }
+        if (!options.textString) {
+            throw "text-singature: parameter textString cannot be empty";
+        }
+        if (typeof options.font === "string") {
             return options;
         }
+
         options.font = (options.font) || ["12px", "Arial"];
         options.font = (options.font).join(" ");
 
@@ -9219,6 +9234,8 @@ textSignature = function(options) {
 
 
         var dataUrl = canvasSelectorDom[0].toDataURL();
+        self.imageData = dataUrl;
+
         var img = $('<img>'); //Equivalent: $(document.createElement('img'))
         img.attr('src', dataUrl);
         img.attr('text-signature-timestamp', uniquetime);
@@ -9226,12 +9243,21 @@ textSignature = function(options) {
 
 
 
+
         if (options.canvasTargetDom) {
-            $(options.canvasTargetDom).html(img);
+            if (self.isInitiated) {
+                $(options.canvasTargetDom).html(img);
+            } else {
+                $(options.canvasTargetDom).html();
+            }
+
         } else {
             window.open(dataUrl, "text-signature image", "width=600, height=200");
         }
 
+    };
+    this.getImageData = function() {
+        return self.imageData;
     };
     this.isDomObject = function(obj) {
         return (obj.tagName ? "true" : "false");
@@ -9249,4 +9275,6 @@ textSignature = function(options) {
 
 module.exports = textSignature
 
-},{}]},{},[1]);
+},{"jquery":4}],4:[function(require,module,exports){
+arguments[4][2][0].apply(exports,arguments)
+},{"dup":2}]},{},[1]);
