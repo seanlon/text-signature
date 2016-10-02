@@ -1,4 +1,6 @@
+$ = require(jquery);
 var textSignature = {};
+
 textSignature = function(options) {
     var self = this;
     self.isInitiated = false;
@@ -11,27 +13,36 @@ textSignature = function(options) {
 
         linkElem.attr('href', options.customFont.url);
         if (linkElem[0].addEventListener) {
-            linkElem[0].addEventListener('load', function() { 
+            linkElem[0].addEventListener('load', function() {
 
                 // wait abit longer and call again -  if first time
                 self.generateImage(options);
-                if (!self.isInitiated) { 
-                    setTimeout(function() {   
+                if (!self.isInitiated) {
+                    setTimeout(function() {
                         self.generateImage(options);
-                    }, 3000);
-                } 
-                
+                    }, 2800);
+                }
+
                 self.isInitiated = true;
             }, false);
         }
 
     }
     this.formatInput = function(options) {
-
-        if (typeof options.font === 'string') {
-            // already formatted
-            return options;
+        //handle errror 
+        if (!options || options == undefined) {
+            throw "text-singature: parameter cannot be null or empty";
         }
+        if (!options.font) {
+            throw "text-singature: parameter font cannot be empty";
+        }
+        if (!options.fillStyle) {
+            throw "text-singature: parameter fillStyle cannot be empty";
+        }
+        if (!options.textString) {
+            throw "text-singature: parameter textString cannot be empty";
+        }
+
         options.font = (options.font) || ["12px", "Arial"];
         options.font = (options.font).join(" ");
 

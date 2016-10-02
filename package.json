@@ -1,6 +1,6 @@
 {
   "name": "text-signature",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A generator for converting your text into a signature image  depending on your font style",
   "main": "bundle.js",
   "scripts": {
@@ -15,8 +15,12 @@
   "keywords": [
     "text",
     "signature",
+    "cursive",
+    "robotic",
     "image",
     "custom",
+    "external",
+    "googlefonts",
     "fonts",
     "generate",
     "automatically",
