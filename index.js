@@ -26,7 +26,7 @@ textSignature = function(options) {
                 // wait abit longer and call again -  if first time
                 self.generateImage(options);
                 if (!self.isInitiated) {
-                    $(options.canvasTargetDom).html();
+                    $(options.canvasTargetDom).html('');
                     setTimeout(function() {
                         self.generateImage(options);
                     }, 2800);
