@@ -20,8 +20,9 @@ https://seanlon.github.io/text-signature/
 
 ###   Where can I donate or contact owner?
 
+[![N|Donate](https://www.paypalobjects.com/webstatic/mktg/logo/PP_AcceptanceMarkTray-NoDiscover_243x40.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GYS2WN8WXLPC4)
 
-Please email me at lseanlon@gmail.com for more information. 
+Thank you! It will motivate me to write more codes! :]
 
 
 ###   How to use it?
