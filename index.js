@@ -30,7 +30,7 @@ $('#nameForm').on('submit', function(e) {
         customFont: customFont
     };
     console.log(paramSignatureText);
-    ts = TextSignature(paramSignatureText);
+    ts = new TextSignature(paramSignatureText);
     e.preventDefault();
     return false;
 });
