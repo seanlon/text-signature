@@ -58,7 +58,7 @@ How to use it?
             }
     };
     
-    textSignature = TextSignature(optionsParameter);
+    textSignature = new TextSignature(optionsParameter);
 ``` 
 
 ###  
