@@ -29,12 +29,17 @@ How to use it?
 
 
 1) Import it via any AMD or UMD.
-     ```sh
-    TextSignature = require('text-signature')
-     ``` 
 
+###    
+```sh
+    TextSignature = require('text-signature')
+``` 
+
+###  
 2) Instantiate it. Check the example parameter below..
-	```sh  
+
+###    
+```sh  
     //#custom fonts to load 
     var optionsParameter = {
             width: 300,
@@ -52,41 +57,43 @@ How to use it?
     };
     
     textSignature = TextSignature(optionsParameter);
-	``` 
+``` 
 
+###  
 3) Re-use it.
-     ```sh
+```sh
     textSignature.generateImage(optionsParameter)
-    ```  
+```  
 
 
 
 ###   Parameters Explanation
  ```sh 
-width: 300, //the width of the image output
-height: 300,//the height of the image output
-paddingX: 100,//the start x position of of the text image output
-paddingY: 100,//the start y position of of the text image output
-
-//the canvas Dom that the image will be rendered into, if blank image will //rendered in  popup new window
-canvasTargetDom: ".js-canvasTargetDom",
-
-//the css fonts styling as per w3 standard of html css style="font: .."
-font:  ["50px", "'Homemade Apple'"],
-
-//the text color"
-color: "blue",
-
-//the text value or message"
-textString: "Your Text HERE",
-
-
-//the load any custom font from external resources"
-customFont: { 
-  name: "'Homemade Apple'", 
-  url: "http://fonts.googleapis.com/css?family=Homemade+Apple"  
-}
-}
+    width: 300, //the width of the image output
+    height: 300,//the height of the image output
+    paddingX: 100,//the start x position of of the text image output
+    paddingY: 100,//the start y position of of the text image output
+    
+    // The canvas Dom that the image will be rendered into, if blank image
+    // will be rendered in  popup new window
+    canvasTargetDom: ".js-canvasTargetDom",
+    
+    //the css fonts styling as per w3 standard of html css style="font: .."
+    font:  ["50px", "'Homemade Apple'"],
+    
+    //the text color"
+    color: "blue",
+    
+    //the text value or message"
+    textString: "Your Text HERE",
+    
+    
+    //the load any custom font from external resources"
+    customFont: { 
+      name: "'Homemade Apple'", 
+      url: "http://fonts.googleapis.com/css?family=Homemade+Apple"  
+    }
+ 
 ```  
 
 ###   Report a bug  ?
