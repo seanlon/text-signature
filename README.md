@@ -17,7 +17,7 @@ This image signature can be in any style depending on the font you used like cur
 
 ###   Where can I find working examples or DEMO?
 https://seanlon.github.io/text-signature/
-[![N|Donate](https://www.paypalobjects.com/webstatic/mktg/logo/PP_AcceptanceMarkTray-NoDiscover_243x40.png)](#)
+[![N|Example](https://github.com/seanlon/text-signature/blob/master/animation.gif)](https://seanlon.github.io/text-signature/)
 
 ###   Where can I donate or contact owner?
 
