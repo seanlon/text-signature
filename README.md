@@ -64,7 +64,11 @@ How to use it?
 ###  
 3) Re-use it.
 ```sh
-    textSignature.generateImage(optionsParameter)
+    textSignature.generateImage(optionsParameter);
+
+    //get base64 image source data 
+    textSignature.getImageData( ) ;
+
 ```  
 
 
