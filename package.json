@@ -10,7 +10,6 @@
     "type": "git",
     "url": "https://github.com/seanlon/text-signature"
   },
-
   "homepage": "https://github.com/seanlon/text-signature",
   "keywords": [
     "text",
@@ -36,5 +35,8 @@
   "devDependencies": {
     "browserify": "^13.1.0",
     "jquery": "^2.1.0"
+  },
+  "dependencies": {
+    "jsdom": "^16.2.2"
   }
 }

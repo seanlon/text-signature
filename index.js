@@ -1,4 +1,5 @@
-$ = require("jquery")
+var jsdom = require('jsdom');
+$ = require("jquery")(new jsdom.JSDOM().window);
 var textSignature = {};
 
 textSignature = function(options) {
